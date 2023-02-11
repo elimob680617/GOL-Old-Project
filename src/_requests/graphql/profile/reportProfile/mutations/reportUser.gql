@@ -1,0 +1,14 @@
+mutation reportUser($filter: GenericMutationRequestReportUserInputType!) {
+  reportUser(filter: $filter) {
+    isSuccess
+    listDto {
+      items {
+        id
+        userId
+        reporterUserId
+        reportStatus
+      }
+    }
+    messagingKey
+  }
+}

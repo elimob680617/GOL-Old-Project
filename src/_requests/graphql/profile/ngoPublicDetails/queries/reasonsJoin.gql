@@ -1,0 +1,11 @@
+query reasonsJoin($filter: GenericFilterRequestReasonJoinInputType!) {
+  reasonsJoin(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+        iconUrl
+      }
+    }
+  }
+}

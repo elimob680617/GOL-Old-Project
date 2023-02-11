@@ -1,0 +1,188 @@
+query getSocialPost($filter: GenericFilterRequestSocialPostReqType!) {
+  getSocialPost(filter: $filter) {
+    listDto {
+      items {
+        id
+        body
+        ownerUserId
+        audience
+        status
+        isDeleted
+        placeId
+        placeDescription
+        placeMainText
+        placeSecondaryText
+        location
+        tagIds
+        mentionedUserIds
+        isLikedByUser
+        postLikerUsers {
+          id
+          avatarUrl
+          cognitoUserId
+          fullName
+          userName
+        }
+        mentionedUsers {
+          id
+          avatarUrl
+          cognitoUserId
+          fullName
+          userName
+        }
+        tags {
+          id
+          title
+        }
+        videoUrls
+        pictureUrls
+        mediaUrls {
+          isVideo
+          url
+        }
+        createdDateTime
+        firstName
+        fullName
+        lastName
+        userName
+        userAvatarUrl
+        countOfComments
+        countOfLikes
+        countOfShared
+        countOfViews
+        userType
+        isMine
+        isSharedCampaignPost
+        isSharedSocialPost
+        sharedSocialPost {
+          id
+          body
+          ownerUserId
+          audience
+          status
+          isDeleted
+          placeId
+          placeDescription
+          placeMainText
+          placeSecondaryText
+          location
+          tagIds
+          mentionedUserIds
+          isLikedByUser
+          postLikerUsers {
+            id
+            avatarUrl
+            cognitoUserId
+            fullName
+            userName
+          }
+          mentionedUsers {
+            id
+            avatarUrl
+            cognitoUserId
+            fullName
+            userName
+          }
+          tags {
+            id
+            title
+          }
+          videoUrls
+          pictureUrls
+          mediaUrls {
+            isVideo
+            url
+          }
+          createdDateTime
+          firstName
+          fullName
+          lastName
+          userName
+          userAvatarUrl
+          countOfComments
+          countOfLikes
+          countOfShared
+          countOfViews
+          userType
+          isMine
+        }
+        sharedCampaignPost {
+          id
+          body
+          title
+          ownerUserId
+          audience
+          status
+          isDeleted
+          placeId
+          summary
+          placeDescription
+          target
+          deadline
+          coverImageUrl
+          placeMainText
+          placeSecondaryText
+          isLikedByUser
+          postLikerUsers {
+            id
+            avatarUrl
+            cognitoUserId
+            fullName
+            userName
+          }
+          location
+          tagIds
+          category
+          mentionedUserIds
+          mentionedUsers {
+            id
+            avatarUrl
+            cognitoUserId
+            fullName
+            userName
+          }
+          tags {
+            id
+            title
+          }
+          videoUrls
+          pictureUrls
+          createdDateTime
+          firstName
+          fullName
+          lastName
+          userName
+          userAvatarUrl
+          averageRate
+          numberOfRates
+          raisedMoney
+          dayLeft
+          donors {
+            firstName
+            lastName
+            fullName
+            cognitoUserId
+            raisedFundAmount
+            avatarUrl
+            isAnonymous
+            isMyConnection
+            mutualConnections
+          }
+          numberOfDonations
+          countOfComments
+          countOfLikes
+          countOfShared
+          countOfViews
+          userType
+          isMine
+        }
+        mediaUrls {
+          isVideo
+          url
+        }
+      }
+      count
+    }
+    isSuccess
+  }
+}

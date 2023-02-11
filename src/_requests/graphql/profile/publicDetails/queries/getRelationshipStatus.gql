@@ -1,0 +1,12 @@
+query getRelationshipStatus($filter: GenericFilterRequestRelationshipStatusInputType!) {
+  getRelationshipStatus(filter: $filter) {
+    isSuccess
+    listDto {
+      count
+      items {
+        id
+        title
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+mutation upsertUserEmail($filter: GenericMutationRequestUserEmailInputType!) {
+  upsertUserEmail(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      items {
+        id
+        userId
+        email
+        audience
+        verificationCode
+        status
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+mutation addPersonSchool($filter: GenericMutationRequestPersonSchoolInputType!) {
+  addPersonSchool(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      items {
+        id
+      }
+    }
+  }
+}

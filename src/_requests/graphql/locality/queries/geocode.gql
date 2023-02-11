@@ -1,0 +1,14 @@
+query geocode($filter: GenericFilterRequestGeometryInputType!) {
+  geocode(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      items {
+        placeId
+        name
+        lat
+        lng
+      }
+    }
+  }
+}

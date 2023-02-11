@@ -1,0 +1,6 @@
+mutation deleteProject($filter: GenericMutationRequestProjectDeleteInputType!) {
+  deleteProject(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

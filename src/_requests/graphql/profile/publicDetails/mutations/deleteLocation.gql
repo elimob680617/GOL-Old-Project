@@ -1,0 +1,6 @@
+mutation deleteLocation($filter: GenericMutationRequestLocationDeleteInputType!) {
+  deleteLocation(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

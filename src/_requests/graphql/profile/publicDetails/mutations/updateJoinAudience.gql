@@ -1,0 +1,10 @@
+mutation updateJoinAudience($filter: GenericMutationRequestPersonJoinInputType!) {
+  updateJoinAudience(filter: $filter) {
+    isSuccess
+    listDto {
+      items {
+        joinAudience
+      }
+    }
+  }
+}

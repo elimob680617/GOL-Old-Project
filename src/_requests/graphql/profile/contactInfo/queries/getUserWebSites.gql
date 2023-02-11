@@ -1,0 +1,12 @@
+query getUserWebSites($filter: GenericFilterRequestUserWebSiteGetAllInputType!) {
+  getUserWebSites(filter: $filter) {
+    listDto {
+      items {
+        id
+        userId
+        webSiteUrl
+        audience
+      }
+    }
+  }
+}

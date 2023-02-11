@@ -1,0 +1,6 @@
+mutation setIsUsefulArticleCommand($article: GenericMutationRequestArticleUsefulReqType!) {
+  setIsUsefulArticleCommand(article: $article) {
+    isSuccess
+    messagingKey
+  }
+}

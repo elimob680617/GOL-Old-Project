@@ -1,0 +1,13 @@
+mutation setAudience($filter:GenericMutationRequestUserAudienceInputType!){
+  setAudience(filter:$filter){
+    messagingKey
+    isSuccess
+    listDto{
+      items{
+        id
+        userId
+      }
+      count
+    }
+  }
+}

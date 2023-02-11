@@ -1,0 +1,10 @@
+query searchIssuingOrganizations($filter: GenericFilterRequestIssuingOrganizationSearchInputType!) {
+  searchIssuingOrganizations(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+    }
+  }
+}

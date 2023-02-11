@@ -1,0 +1,16 @@
+query getEndorsements($filter: GenericFilterRequestEndorsementSkillGetInputType!) {
+  getEndorsements(filter: $filter) {
+    listDto {
+      count
+      items {
+        id
+        firstName
+        lastName
+        fullName
+        coverUrl
+        avatarUrl
+        headline
+      }
+    }
+  }
+}

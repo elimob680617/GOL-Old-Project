@@ -1,0 +1,17 @@
+query profileComplete($filter: GenericFilterRequestProfileCompleteInputType!) {
+  profileComplete(filter: $filter) {
+    listDto {
+      items {
+        id
+        profilePicture
+        coverPhoto
+        profileInformation
+        location
+        experience
+        education
+        completeProfilePercentage
+      }
+      count
+    }
+  }
+}

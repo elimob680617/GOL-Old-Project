@@ -1,0 +1,6 @@
+mutation deleteWebSite($filter: GenericMutationRequestUserWebSiteDeleteInputType!) {
+  deleteWebSite(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

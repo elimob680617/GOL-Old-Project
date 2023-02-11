@@ -1,0 +1,25 @@
+query organizationProfileComplete($filter: GenericFilterRequestOrganizationProfileCompleteInputType!) {
+  organizationProfileComplete(filter: $filter) {
+    listDto {
+      items {
+        id
+        ngoLogo
+        coverPhoto
+        bio
+        certificate
+        profileDetails
+        projects
+        webSiteLinks
+        phoneNumber
+        completeProfilePercentage
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  }
+}

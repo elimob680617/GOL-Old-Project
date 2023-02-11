@@ -1,0 +1,16 @@
+mutation upsertPhoneNumber($filter: GenericMutationRequestUserPhoneNumberInputType!) {
+  upsertPhoneNumber(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      count
+      items {
+        id
+        userId
+        phoneNumber
+        audience
+        verificationCode
+      }
+    }
+  }
+}

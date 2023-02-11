@@ -1,0 +1,11 @@
+mutation addProject($filter: GenericMutationRequestOrganizationUserProjectInputType!) {
+  addProject(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      items {
+        id
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+query searchCertificateNames($filter: GenericFilterRequestCertificateNameSearchInputType!) {
+  searchCertificateNames(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+    }
+  }
+}

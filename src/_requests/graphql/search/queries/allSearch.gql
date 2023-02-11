@@ -1,0 +1,38 @@
+query searchAll($filter: GenericFilterRequestSearchAllReqInputType!) {
+  searchAllQueryHandler(filter: $filter) {
+    listDto {
+      items {
+        people {
+          id
+          coverUrl
+          avatarUrl
+          headline
+          cognitoUserId
+          userName
+          firstName
+          lastName
+          fullName
+          email
+          otherToMeStatus
+          meToOtherStatus
+        }
+        ngos {
+          id
+          fullName
+          avatarUrl
+          otherToMeStatus
+          meToOtherStatus
+        }
+        posts
+        hashtags {
+          id
+          title
+          otherToMeStatus
+          meToOtherStatus
+        }
+        fundRaisings
+      }
+      count
+    }
+  }
+}

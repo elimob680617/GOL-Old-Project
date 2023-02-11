@@ -1,0 +1,6 @@
+mutation upsertCertificate($filter: GenericMutationRequestCertificateInputType!) {
+  upsertCertificate(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

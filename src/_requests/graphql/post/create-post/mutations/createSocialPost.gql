@@ -1,0 +1,9 @@
+mutation createSocialPost($post: GenericMutationRequestCreateSocialPostInputType!) {
+  createSocialPost(socialpost: $post) {
+    listDto {
+      items {
+        id
+      }
+    }
+  }
+}

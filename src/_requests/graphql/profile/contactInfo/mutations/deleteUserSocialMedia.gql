@@ -1,0 +1,5 @@
+mutation deleteUserSocialMedia($filter: GenericMutationRequestUserSocialMediaDeleteInputType!) {
+  deleteUserSocialMedia(filter: $filter) {
+    isSuccess
+  }
+}

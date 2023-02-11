@@ -1,0 +1,6 @@
+mutation upsertWebsite($filter: GenericMutationRequestUserWebSiteInputType!) {
+  upsertWebSite(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

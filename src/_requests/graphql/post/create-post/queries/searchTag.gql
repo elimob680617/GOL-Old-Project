@@ -1,0 +1,11 @@
+query searchTag($filter: GenericFilterRequestTagReqType!) {
+  recommendedTags(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+        count
+      }
+    }
+  }
+}

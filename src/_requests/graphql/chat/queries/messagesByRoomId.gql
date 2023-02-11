@@ -1,0 +1,24 @@
+query messagesByRoomId($filter: GenericFilterRequestMessageInputType!) {
+  messagesByRoomId(filter: $filter) {
+    listDto {
+      items {
+        id
+        conversationContactId
+        toUserId
+        toUserName
+        text
+        mine
+        ulId
+        roomId
+        createdDateTime
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  }
+}

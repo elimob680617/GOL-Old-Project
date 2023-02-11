@@ -1,0 +1,26 @@
+overwrite: true
+schema: ${NEXT_PUBLIC_GQL_CONNECTION_SCHEMA}
+hooks:
+  afterAllFileWrite:
+    - node scripts/make-api-reducers.js --service=CONNECTION
+generates:
+  src/:
+    hooks:
+      afterOneFileWrite:
+        # - eslint --fix
+    preset: near-operation-file
+    documents: src/_requests/graphql/connection/**/*.gql
+    presetConfig:
+      extension: .generated.ts
+      baseTypesPath: '@types/sections/serverTypes.ts'
+      importTypesNamespace: ServerTypes
+    plugins:
+      - typescript-operations
+      - typescript-rtk-query:
+          importBaseApiFrom: src/_clients/graphql/Connection
+    config:
+      addDocBlocks: false
+      exportFragmentSpreadSubTypes: true
+      exportHooks: true
+      skipTypename: true
+      useTypeImports: true

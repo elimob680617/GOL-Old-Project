@@ -1,0 +1,11 @@
+mutation deleteFundRaisingPost($fundRaisingPost: GenericMutationRequestCreateFundRaisingPostInputType!) {
+  deleteFundRaisingPost(fundRaisingPost: $fundRaisingPost) {
+    listDto {
+      items {
+        id
+      }
+      count
+    }
+    isSuccess
+  }
+}

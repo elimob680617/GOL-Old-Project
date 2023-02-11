@@ -1,0 +1,75 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  IMAGE_PRODUCTION_TAGGED_NAME: $CI_REGISTRY_IMAGE/production:$CI_COMMIT_SHORT_SHA
+  IMAGE_PRODUCTION_LATEST_TAGGED_NAME: $CI_REGISTRY_IMAGE/production:latest
+  IMAGE_STAGE_TAGGED_NAME: $CI_REGISTRY_IMAGE/stage:$CI_COMMIT_SHORT_SHA
+  IMAGE_STAGE_LATEST_TAGGED_NAME: $CI_REGISTRY_IMAGE/stage:latest
+  IMAGE_DEV_TAGGED_NAME: $CI_REGISTRY_IMAGE/dev:$CI_COMMIT_SHORT_SHA
+  IMAGE_DEV_LATEST_TAGGED_NAME: $CI_REGISTRY_IMAGE/dev:latest
+
+dev:build:
+  stage: build
+  only:
+    - staging
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - cp $ENV_DEV .env
+    - docker build -t $IMAGE_DEV_LATEST_TAGGED_NAME .
+    - docker push $IMAGE_DEV_LATEST_TAGGED_NAME
+  tags:
+    - dev
+
+dev:deploy:
+  image: alpine:3.12
+  stage: deploy
+  only:
+    - staging
+  before_script:
+    - apk add --no-cache --no-progress ansible openssh-client
+    - mkdir ~/.ssh
+    - mkdir /etc/ansible
+    - cp .deployment/ansible.cfg /etc/ansible/ansible.cfg
+    - echo "StrictHostKeyChecking no" > ~/.ssh/config
+    - echo "UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+    - cp ${CI_PRIVATE_KEY} ~/.ssh/id_ed25519
+    - chmod 600 ~/.ssh/id_ed25519
+  script:
+    - ansible-playbook .deployment/develop.yml -i ${CI_NODES}, -e "image_address=$IMAGE_DEV_LATEST_TAGGED_NAME service_name=dev-ssr-application port_number=30040"
+  tags:
+    - dev-kube
+
+stage:build:
+  stage: build
+  only:
+    - test
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - cp $ENV_TEST .env
+    - docker build -t $IMAGE_STAGE_LATEST_TAGGED_NAME .
+    - docker push $IMAGE_STAGE_LATEST_TAGGED_NAME
+  tags:
+    - stage
+
+stage:deploy:
+  image: alpine:3.12
+  stage: deploy
+  only:
+    - test
+  before_script:
+    - apk add --no-cache --no-progress ansible openssh-client
+    - mkdir ~/.ssh
+    - mkdir /etc/ansible
+    - cp .deployment/ansible.cfg /etc/ansible/ansible.cfg
+    - echo "StrictHostKeyChecking no" > ~/.ssh/config
+    - echo "UserKnownHostsFile=/stage/null" >> ~/.ssh/config
+    - cp ${CI_PRIVATE_KEY} ~/.ssh/id_ed25519
+    - chmod 600 ~/.ssh/id_ed25519
+  script:
+    - ansible-playbook .deployment/stage.yml -i ${CI_NODES}, -e "image_address=$IMAGE_STAGE_LATEST_TAGGED_NAME service_name=stage-ssr-application port_number=31040"
+  tags:
+    - stage-kube

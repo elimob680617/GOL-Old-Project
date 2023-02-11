@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'lexend-bold';
+  font-style: normal;
+  src: url('Lexend-Bold.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'lexend-regular';
+  font-style: normal;
+  src: url('Lexend-Regular.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'lexend-medium';
+  font-style: normal;
+  src: url('Lexend-Medium.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'lexend-light';
+  font-style: normal;
+  src: url('Lexend-Light.ttf') format('opentype');
+}

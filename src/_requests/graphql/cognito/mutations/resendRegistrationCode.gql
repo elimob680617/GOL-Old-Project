@@ -1,0 +1,12 @@
+mutation resendRegistrationCode($resendRegistrationCodeDto: GenericMutationRequestForgotPasswordTokenInputType!) {
+  resendRegistrationCode(resendRegistrationCodeDto: $resendRegistrationCodeDto) {
+    listDto {
+      items {
+        userName
+        message
+      }
+      count
+    }
+    isSuccess
+  }
+}

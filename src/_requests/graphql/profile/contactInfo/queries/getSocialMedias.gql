@@ -1,0 +1,10 @@
+query getSocialMedias($filter: GenericFilterRequestSocialMediaInputType!) {
+  getSocialMedias(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+    }
+  }
+}

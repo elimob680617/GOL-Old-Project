@@ -1,0 +1,19 @@
+query getCampaignList($filter: GenericFilterRequestCampaignPostReportReqType!) {
+  getCampaignsInfo(filter: $filter) {
+    isSuccess
+    listDto {
+      items {
+        campaignId
+        campaignName
+        ownerUserId
+        ngoName
+        campaignStatus
+        target
+        raisedFund
+        startDate
+        updateDate
+        endDate
+      }
+    }
+  }
+}

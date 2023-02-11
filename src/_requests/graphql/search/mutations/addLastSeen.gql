@@ -1,0 +1,10 @@
+mutation addLastSeen($filter: GenericMutationRequestAddLastSeenReqInputType) {
+  lastSeenCommandHandler(filter: $filter) {
+    listDto {
+      items {
+        id
+      }
+      count
+    }
+  }
+}

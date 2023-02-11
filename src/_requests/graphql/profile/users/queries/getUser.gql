@@ -1,0 +1,178 @@
+query getUser($filter: GenericFilterRequestUserInputType!) {
+  getUser(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      count
+      items {
+        userType
+        completeQar
+        accountPrivacy
+        personDto {
+          id
+          firstName
+          lastName
+          fullName
+          phoneNumber
+          email
+          coverUrl
+          avatarUrl
+          headline
+          birthday
+          gender
+          currnetCity {
+            id
+            personId
+            cityId
+            locationType
+            audience
+            city {
+              id
+              name
+              placeId
+            }
+          }
+          hometown {
+            id
+            personId
+            cityId
+            locationType
+            audience
+            city {
+              id
+              name
+              placeId
+            }
+          }
+
+          relationship {
+            personId
+            audience
+            relationshipStatus {
+              id
+              title
+            }
+          }
+          personCurrentExperiences {
+            id
+            title
+            description
+            employmentType
+            audience
+            startDate
+            endDate
+            stillWorkingThere
+            companyId
+            companyDto {
+              id
+              title
+              logoUrl
+            }
+            cityDto {
+              id
+              name
+              placeId
+              countryId
+            }
+            dateDiff {
+              years
+              months
+              days
+            }
+            mediaUrl
+          }
+          experience {
+            id
+            title
+            description
+            employmentType
+            audience
+            startDate
+            endDate
+            stillWorkingThere
+            companyId
+            companyDto {
+              id
+              title
+              logoUrl
+            }
+            cityDto {
+              id
+              name
+              placeId
+            }
+            dateDiff {
+              years
+              months
+              days
+            }
+            mediaUrl
+          }
+          personSchools {
+            id
+            year
+            school {
+              id
+              title
+            }
+            audience
+          }
+          personUniversities {
+            id
+            personDto {
+              id
+            }
+            collegeDto {
+              id
+              instituteType
+              name
+              alphaTwoCode
+              country
+              stateProvince
+              webSiteUrl1
+              webSiteUrl2
+            }
+          }
+        }
+
+        organizationUserDto {
+          numberRange {
+            id
+            from
+            to
+            desc
+          }
+          id
+          organizationUserType
+          groupCategoryId
+          groupCategory {
+            id
+            title
+            groupCategoryType
+          }
+          placeId
+          place {
+            id
+            description
+            mainText
+            secondaryText
+            placeId
+          }
+          placeAudience
+          address
+          avatarUrl
+          coverUrl
+          fullName
+          joinDateTime
+          joinAudience
+          establishmentDate
+          joinAudience
+          sizeAudience
+          establishmentDateAudience
+          groupCategoryAudience
+          bio
+        }
+      }
+    }
+  }
+}

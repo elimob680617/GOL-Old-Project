@@ -1,0 +1,16 @@
+query getRelationship($filter: GenericFilterRequestRelationshipItemInputType!) {
+  getRelationship(filter: $filter) {
+    isSuccess
+    listDto {
+      count
+      items {
+        personId
+        audience
+        relationshipStatus {
+          id
+          title
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+query getSkillForFilter($filter: GenericFilterRequestFilterReqInputType!) {
+  skillSearchQueryHandler(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+      count
+    }
+    isSuccess
+  }
+}

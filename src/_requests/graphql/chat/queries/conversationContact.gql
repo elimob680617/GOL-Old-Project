@@ -1,0 +1,28 @@
+query conversationContacts($filter: GenericFilterRequestConversationContactInputType!) {
+  conversationContacts(filter: $filter) {
+    listDto {
+      items {
+        avatarUrl
+        userId
+        roomId
+        cognitoUserId
+        userConversationId
+        lastMessageDateTime
+        conversationMuted
+        fullName
+        id
+        lastMessage
+        userName
+        version
+        lastSeenDateTime
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  }
+}

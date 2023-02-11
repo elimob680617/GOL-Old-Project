@@ -1,0 +1,11 @@
+node_modules
+.deployment
+.next
+yarn.lock
+package-lock.json
+public
+src/_clients
+src/_requests
+src/redux/*.ts
+src/@types/sections/serverTypes.ts
+scripts

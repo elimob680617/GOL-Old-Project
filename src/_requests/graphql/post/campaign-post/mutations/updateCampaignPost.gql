@@ -1,0 +1,11 @@
+mutation updateFundRaisingPost($fundraisingPost: GenericMutationRequestCreateFundRaisingPostInputType!) {
+  updateFundRaisingPost(fundRaisingPost: $fundraisingPost) {
+    listDto {
+      items {
+        id
+      }
+      count
+    }
+    isSuccess
+  }
+}

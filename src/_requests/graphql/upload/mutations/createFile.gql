@@ -1,0 +1,11 @@
+mutation uploadImage($file: GenericMutationRequestFileInputType!) {
+  createFile(file: $file) {
+    listDto {
+      items {
+        url
+      }
+      count
+    }
+    isSuccess
+  }
+}

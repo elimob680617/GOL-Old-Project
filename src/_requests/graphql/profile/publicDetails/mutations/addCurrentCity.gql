@@ -1,0 +1,22 @@
+mutation upsertLocation($filter: GenericMutationRequestLocationInputType!) {
+  upsertLocation(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      count
+      items {
+        id
+        personId
+        cityId
+        locationType
+        audience
+        city {
+          id
+          name
+          placeId
+          countryId
+        }
+      }
+    }
+  }
+}

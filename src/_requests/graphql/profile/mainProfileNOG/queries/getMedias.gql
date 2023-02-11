@@ -1,0 +1,12 @@
+query getMedias($filter: GenericFilterRequestProjectMediasInputType!) {
+  getMedias(filter: $filter) {
+    listDto {
+      items {
+        id
+        projectId
+        url
+        urls
+      }
+    }
+  }
+}

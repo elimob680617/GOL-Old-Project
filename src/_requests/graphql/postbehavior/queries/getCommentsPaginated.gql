@@ -1,0 +1,71 @@
+query getComments($filter: GenericFilterRequestCommentReqType!) {
+  getCommentsPaginated(filter: $filter) {
+    listDto {
+      items {
+        id
+        replyId
+        userId
+        parentId
+        orgId
+        userFullName
+        userAvatarUrl
+        numberOfReplies
+        numberOfLikes
+        body
+        mediaUrl
+        userType
+        mentionedUsers {
+          fullName
+          mentionedUserId
+        }
+        commentTags {
+          tagId
+          tagTitle
+        }
+        commentReplies {
+          id
+          replyId
+          userId
+          parentId
+          orgId
+          userFullName
+          userAvatarUrl
+          numberOfReplies
+          numberOfLikes
+          body
+          mediaUrl
+          mentionedUsers {
+            fullName
+            mentionedUserId
+          }
+          commentTags {
+            tagId
+            tagTitle
+          }
+          commentReplies {
+            id
+            replyId
+            userId
+            parentId
+            orgId
+            userFullName
+            userAvatarUrl
+            numberOfReplies
+            numberOfLikes
+            body
+            mediaUrl
+            isLikedByUser
+            createDateTime
+            updateDateTime
+          }
+          isLikedByUser
+          createDateTime
+          updateDateTime
+        }
+        isLikedByUser
+        createDateTime
+        updateDateTime
+      }
+    }
+  }
+}

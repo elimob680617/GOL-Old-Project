@@ -1,0 +1,6 @@
+mutation endorsementSkill($filter: GenericMutationRequestEndorsementSkillInputType!) {
+  endorsementSkill(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

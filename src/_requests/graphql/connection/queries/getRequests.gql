@@ -1,0 +1,26 @@
+query getRequests($filter: GenericFilterRequestRequestInputType!) {
+  getRequests(filter: $filter) {
+    listDto {
+      items {
+        connectionId
+        itemId
+        firstName
+        lastName
+        fullName
+        headline
+        avatarUrl
+        itemType
+        meToOtherStatus
+        otherToMeStatus
+        accountPrivacy
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  }
+}

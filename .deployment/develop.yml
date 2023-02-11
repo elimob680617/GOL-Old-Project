@@ -1,0 +1,35 @@
+---
+- hosts: all
+  user: gitlab-runner
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  tasks:
+    - name: create necessary direcotories
+      file:
+        state: directory
+        path: /home/gitlab-runner/aws/ssr.application/develop
+        owner: gitlab-runner
+        group: gitlab-runner
+        mode: '0755'
+
+    - name: place new deployment yaml file
+      template:
+        src: deployment.yaml
+        dest: /home/gitlab-runner/aws/ssr.application/develop/deployment.yml
+        owner: gitlab-runner
+        group: gitlab-runner
+
+    - name: place new service yaml file
+      template:
+        src: service.yaml
+        dest: /home/gitlab-runner/aws/ssr.application/develop/service.yml
+        owner: gitlab-runner
+        group: gitlab-runner
+
+    - name: prepare and replace containers
+      command: '{{ item }}'
+      args:
+        chdir: /home/gitlab-runner/aws/ssr.application/develop
+      with_items:
+        - kubectl -n develop delete -f deployment.yml
+        - kubectl -n develop apply -f .

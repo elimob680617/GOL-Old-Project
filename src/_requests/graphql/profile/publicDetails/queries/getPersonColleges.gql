@@ -1,0 +1,23 @@
+query getPersonColleges($filter: GenericFilterRequestPersonCollegeGetAllInputType!) {
+  getPersonColleges(filter: $filter) {
+    listDto {
+      items {
+        id
+        collegeDto {
+          id
+          name
+          country
+        }
+        concentrationDto {
+          id
+          title
+        }
+        graduated
+        startDate
+        endDate
+        audience
+        instituteType
+      }
+    }
+  }
+}

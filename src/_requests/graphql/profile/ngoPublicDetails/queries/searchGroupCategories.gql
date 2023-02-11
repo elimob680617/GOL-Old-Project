@@ -1,0 +1,12 @@
+query searchGroupCategories($filter: GenericFilterRequestGroupCategorySearchInputType!) {
+  searchGroupCategories(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+        iconUrl
+        groupCategoryType
+      }
+    }
+  }
+}

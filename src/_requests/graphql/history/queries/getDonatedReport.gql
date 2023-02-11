@@ -1,0 +1,25 @@
+query getDonatedReportQuery($filter: GenericFilterRequestUserDonatedsReqType!) {
+  getDonatedReportQuery(filter: $filter) {
+    listDto {
+      items {
+        campaignName
+        ngoName
+        campaignStatus
+        raisedFundDateTime
+        raisedFund
+        ownerUserId
+        firstName
+        lastName
+        rate
+        avatarImageUrl
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  }
+}

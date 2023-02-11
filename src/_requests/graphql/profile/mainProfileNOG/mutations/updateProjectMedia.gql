@@ -1,0 +1,6 @@
+mutation updateProjectMedia($filter: GenericMutationRequestProjectMediaInputType!) {
+  updateProjectMedia(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

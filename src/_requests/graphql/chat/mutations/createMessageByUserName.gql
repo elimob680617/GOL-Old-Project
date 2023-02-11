@@ -1,0 +1,25 @@
+mutation createMessageByUserName($message: GenericMutationRequestMessageByUserNameInputType!) {
+  createMessageByUserName(message: $message) {
+    listDto {
+      items {
+        id
+        conversationContactId
+        toUserId
+        ulId
+        toCognitoUserId
+        toUserName
+        text
+        mine
+        roomId
+        createdDateTime
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  }
+}

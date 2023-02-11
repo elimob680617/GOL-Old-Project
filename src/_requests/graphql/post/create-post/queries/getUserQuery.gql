@@ -1,0 +1,14 @@
+query getUser($filter: GenericFilterRequestUserReqType!) {
+  getUserQuery(filter: $filter) {
+    listDto {
+      items {
+        id
+        fullName
+        avatarUrl
+        userName
+        headLine
+        userType
+      }
+    }
+  }
+}

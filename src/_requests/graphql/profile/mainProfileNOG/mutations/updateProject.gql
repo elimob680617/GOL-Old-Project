@@ -1,0 +1,6 @@
+mutation updateProject($filter: GenericMutationRequestOrganizationUserProjectInputType!) {
+  updateProject(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

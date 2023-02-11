@@ -1,0 +1,29 @@
+query getCampaignDetailsInfo($filter: GenericFilterRequestCampaignDetailsInfoReqType!) {
+  getCampaignDetailsInfo(filter: $filter) {
+    isSuccess
+    listDto {
+      items {
+        campaignName
+        campaignId
+        numberOfRates
+        numberOfComments
+        numberOfLikes
+        numberOfReshared
+        donors
+        numberOfSaved
+        target
+        raisedFund
+        averageRate
+        engagementPercent
+        impression
+        earnedFollower
+        campaignView
+        numberOfFinished
+        numberOfIntrupted
+        numberOfSuccessFul
+        numberOfActive
+        daysLeft
+      }
+    }
+  }
+}

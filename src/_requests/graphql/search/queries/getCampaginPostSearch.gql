@@ -1,0 +1,10 @@
+query getCampaginPostSearch($filter: GenericFilterRequestFundRaisingSearchReqInputType!) {
+  fundRaisingSearchQueryHandler(filter: $filter) {
+    listDto {
+      items {
+        id
+      }
+      count
+    }
+  }
+}

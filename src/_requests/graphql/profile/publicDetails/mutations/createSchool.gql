@@ -1,0 +1,12 @@
+mutation createSchool($filter: GenericMutationRequestCreateSchoolInputType!) {
+  createSchool(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      items {
+        id
+        title
+      }
+    }
+  }
+}

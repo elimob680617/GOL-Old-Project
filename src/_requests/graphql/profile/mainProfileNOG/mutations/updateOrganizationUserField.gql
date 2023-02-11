@@ -1,0 +1,11 @@
+mutation updateOrganizationUserField($filter: GenericMutationRequestOrganizationUserInputType!) {
+  updateOrganizationUserField(filter: $filter) {
+    isSuccess
+    listDto {
+      items {
+        coverUrl
+        avatarUrl
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+mutation verifyRegistration($verifyRegistrationReqDto: GenericMutationRequestVerifyEmailInputType!) {
+  verifyRegistration(verifyRegistrationReqDto: $verifyRegistrationReqDto) {
+    listDto {
+      items {
+        token
+        expiry
+        refreshToken
+        firstName
+        lastName
+      }
+      count
+    }
+    isSuccess
+  }
+}

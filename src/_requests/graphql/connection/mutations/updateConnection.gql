@@ -1,0 +1,16 @@
+mutation updateConnection($filter: GenericMutationRequestChangeStatusInputType!) {
+  updateConnection(filter: $filter) {
+    listDto {
+      items {
+        connectionId
+        itemId
+        itemType
+        meToOtherStatus
+        otherToMeStatus
+      }
+      count
+    }
+    isSuccess
+    messagingKey
+  }
+}

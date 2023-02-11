@@ -1,0 +1,6 @@
+mutation deleteCertificate($filter: GenericMutationRequestCertificateDeleteInputType!) {
+  deleteCertificate(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

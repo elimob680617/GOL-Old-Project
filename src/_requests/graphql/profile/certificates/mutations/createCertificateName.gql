@@ -1,0 +1,12 @@
+mutation createCertificateName($filter: GenericMutationRequestCreateCertificateNameInputType!) {
+  createCertificateName(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      items {
+        id
+        title
+      }
+    }
+  }
+}

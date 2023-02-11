@@ -1,0 +1,6 @@
+mutation removePhoneNumber($filter: GenericMutationRequestUserPhoneNumberDeleteInputType!) {
+  deletePhoneNumber(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

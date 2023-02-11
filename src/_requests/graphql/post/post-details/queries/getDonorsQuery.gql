@@ -1,0 +1,23 @@
+query getDonorsQuery($filter: GenericFilterRequestDonorReqType!){
+  getDonorsQuery(filter:$filter) {
+    listDto {
+      items {
+        firstName
+        lastName
+        fullName
+        cognitoUserId
+        avatarUrl
+        isAnonymous
+        isMyConnection
+        mutualConnections
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  }
+}

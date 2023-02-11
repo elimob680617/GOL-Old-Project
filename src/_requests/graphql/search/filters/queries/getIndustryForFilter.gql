@@ -1,0 +1,11 @@
+query gertIndustryForFilter($filter: GenericFilterRequestFilterReqInputType!) {
+  industrySearchQueryHandler(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+      count
+    }
+  }
+}

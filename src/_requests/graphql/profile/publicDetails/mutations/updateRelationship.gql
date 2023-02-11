@@ -1,0 +1,17 @@
+mutation updateRelationship($filter: GenericMutationRequestRelationshipInputType!) {
+  updateRelationship(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      count
+      items {
+        personId
+        audience
+        relationshipStatus {
+          id
+          title
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+query getCampaignDonorsInfo($filter: GenericFilterRequestDonorReportReqType!) {
+  getCampaignDonorsInfo(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      count
+      items {
+        campaignName
+        raisedFund
+        raisedFundDateTime
+        firstName
+        lastName
+        rate
+        avatarImageUrl
+      }
+      count
+    }
+  }
+}

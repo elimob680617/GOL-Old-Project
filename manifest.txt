@@ -1,0 +1,30 @@
+sections:
+1 - theming and styling
+2 - typography
+3 - unit of spacings
+4 - namings
+
+
+creating packages:
+each package has its own index.ts for name exports.
+
+- Stack Box Grid and etc are layouting components. these components are used in both pages and buisiness components.
+
+- Generally business components are actions forms and presentation cards and dialogs.
+
+1 - specify the business (for example auth)
+
+2 - put room for the business in to sections and slices (auth folder created here)
+
+3 - index is something we want to publish as a package and shorten the import path. so each business package can have its own index.ts file to name export the nested default components. (we have an index.ts exporter for each business package as we have it here in sections/auth folder )
+
+4 - we create a type file dependent to the business(auth) slice we're about to create. the type file name is auth either.
+
+5 - We create the business dependent slice in redux. a auth slice is fine here.
+- each slice get a name -> officially the business package name.
+- we type the initialState for the slice very neat. we name it {Package}State
+- for each business form-component we have its own RHF state. if we need to persist it in other next pages we should pass(dispatch) the RFH values to a part of slice. if we want to get back to the form we set the initial values of RHF to the slice part.(by useSelector).
+- we should create a custom selector function for each deep down component.
+
+6 - business components does not have any layout stylings: Making spaces between elements are better done with a empty <Box mt={1}/> or stack and spacings.
+7 - we style components by sxProps and styled approach.

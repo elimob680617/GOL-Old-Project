@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  dev-ssr:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: 'front-dev-ssr-aws'
+    ports:
+      - 127.0.0.1:4081:3000

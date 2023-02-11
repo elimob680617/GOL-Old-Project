@@ -1,0 +1,11 @@
+query searchCompanies($filter: GenericFilterRequestCompanySearchInputType!) {
+  searchCompanies(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+        logoUrl
+      }
+    }
+  }
+}

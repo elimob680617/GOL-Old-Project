@@ -1,0 +1,82 @@
+query getHelpCategoriesQuery($filter: GenericFilterRequestCategoryRequestType!) {
+  getHelpCategoriesQuery(filter: $filter) {
+    listDto {
+      count
+      items {
+        id
+        title
+        parentId
+        iconUrl
+        permalink
+        description
+        articles {
+          id
+          title
+          permalink
+          categoryPermalink
+          categoryTitle
+          categoryIconUrl
+          breadCrumb {
+            id
+            title
+            parentId
+            iconUrl
+            permalink
+            description
+            articles {
+              id
+              title
+              permalink
+              categoryPermalink
+              categoryTitle
+              categoryIconUrl
+              breadCrumb {
+                id
+                title
+                parentId
+                iconUrl
+                permalink
+                description
+              }
+              content
+              content
+              titleTranslations {
+                key
+                value
+              }
+              contentTranslations {
+                key
+                value
+              }
+            }
+            titleTranslations {
+              key
+              value
+            }
+            descriptionTranslations {
+              key
+              value
+            }
+          }
+          content
+          titleTranslations {
+            key
+            value
+          }
+          contentTranslations {
+            key
+            value
+          }
+        }
+        titleTranslations {
+          key
+          value
+        }
+        descriptionTranslations {
+          key
+          value
+        }
+      }
+    }
+  }
+}

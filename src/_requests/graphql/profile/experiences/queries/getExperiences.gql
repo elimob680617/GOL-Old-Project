@@ -1,0 +1,34 @@
+query getExperiences($filter: GenericFilterRequestPersonExperienceInputType!) {
+  getExpriences(filter: $filter) {
+    listDto {
+      items {
+        title
+        id
+        description
+        employmentType
+        audience
+        startDate
+        endDate
+        stillWorkingThere
+        companyId
+        companyDto {
+          id
+          title
+          logoUrl
+        }
+        cityDto {
+          id
+          name
+          placeId
+        }
+        dateDiff {
+          years
+          months
+          days
+        }
+        cityId
+        mediaUrl
+      }
+    }
+  }
+}

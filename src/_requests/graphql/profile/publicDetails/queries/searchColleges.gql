@@ -1,0 +1,10 @@
+query searchColleges($filter: GenericFilterRequestSearchCollegeInputType!) {
+  searchColleges(filter: $filter) {
+    listDto {
+      items {
+        id
+        name
+      }
+    }
+  }
+}

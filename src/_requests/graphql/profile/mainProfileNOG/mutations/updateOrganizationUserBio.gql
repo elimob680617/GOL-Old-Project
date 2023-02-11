@@ -1,0 +1,10 @@
+mutation updateOrganizationUserBio($filter: GenericMutationRequestOrganizationUserBioInputType!) {
+  updateOrganizationUserBio(filter: $filter) {
+    isSuccess
+    listDto {
+      items {
+        bio
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+mutation confirmPhoneNumber($filter: GenericMutationRequestConfirmPhoneNumberInputType!) {
+  confirmPhoneNumber(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

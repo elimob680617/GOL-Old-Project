@@ -1,0 +1,17 @@
+query getUserSocialMedias($filter: GenericFilterRequestUserSocialMediaGetAllInputType!) {
+  getUserSocialMedias(filter: $filter) {
+    listDto {
+      items {
+        id
+        userName
+        userId
+        audience
+        socialMediaDto {
+          id
+          title
+          logoUrl
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+query getReportCategories($filter:GenericFilterRequestReportProfileCategoryInputType!){
+  getReportCategories(filter:$filter){
+    isSuccess
+    listDto{
+      items{
+        id
+        parentTitle
+        parentId
+        rootId
+        title
+        description
+      }
+      count
+    }
+    messagingKey
+  }
+}

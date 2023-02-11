@@ -1,0 +1,6 @@
+mutation deleteUserEmail($filter: GenericMutationRequestUserEmailDeleteInputType!) {
+  deleteUserEmail(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

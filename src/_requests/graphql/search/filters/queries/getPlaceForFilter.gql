@@ -1,0 +1,11 @@
+query getPlaceForFilter($filter: GenericFilterRequestFilterReqInputType!) {
+  placeSearchQueryHandler(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+      count
+    }
+  }
+}

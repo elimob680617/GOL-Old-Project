@@ -1,0 +1,17 @@
+query getPersonSchools($filter: GenericFilterRequestPersonSchoolGetAllInputType!) {
+  getPersonSchools(filter: $filter) {
+    listDto {
+      items {
+        id
+        year
+        personId
+        school {
+          id
+          title
+        }
+        schoolId
+        audience
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+mutation upsertOrganizationUserReasonsJoin($filter: GenericMutationRequestOrganizationUserReasonJoinInputType!) {
+  upsertOrganizationUserReasonsJoin(filter: $filter) {
+    isSuccess
+    listDto {
+      items {
+        reasonJoinId
+        organizationUserId
+        id
+      }
+    }
+  }
+}

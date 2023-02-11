@@ -1,0 +1,11 @@
+mutation deletePersonCollege($filter: GenericMutationRequestPersonCollegeDeleteInputType!) {
+  deletePersonCollege(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      items {
+        id
+      }
+    }
+  }
+}

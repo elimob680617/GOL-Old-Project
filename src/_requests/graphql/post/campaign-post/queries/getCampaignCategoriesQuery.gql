@@ -1,0 +1,12 @@
+
+query getCampaignCategoriesQuery($filter:GenericFilterRequestCampaignCategoryReqType! ) {
+  getCampaignCategoriesQuery(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+      count
+    }
+  }
+}

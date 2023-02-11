@@ -1,0 +1,10 @@
+query getSkills($filter: GenericFilterRequestSkillInputType!) {
+  getSkills(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+    }
+  }
+}

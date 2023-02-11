@@ -1,0 +1,14 @@
+query getUserEmails($filter: GenericFilterRequestUserEmailGetAllInputType!) {
+  getUserEmails(filter: $filter) {
+    listDto {
+      items {
+        id
+        userId
+        email
+        audience
+        verificationCode
+        status
+      }
+    }
+  }
+}

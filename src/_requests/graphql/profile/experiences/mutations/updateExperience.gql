@@ -1,0 +1,11 @@
+mutation updateExperience($filter: GenericMutationRequestPersonExperienceInputType!) {
+  updateExperience(filter: $filter) {
+    isSuccess
+  }
+}
+
+mutation deleteExperience($filter: GenericMutationRequestExperienceDeleteInputType!) {
+  deleteExperience(filter: $filter) {
+    isSuccess
+  }
+}

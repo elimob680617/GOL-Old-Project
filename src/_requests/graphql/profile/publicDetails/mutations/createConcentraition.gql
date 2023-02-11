@@ -1,0 +1,12 @@
+mutation createConcentration($filter: GenericMutationRequestConcentrationCreateInputType!) {
+  createConcentration(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      items {
+        id
+        title
+      }
+    }
+  }
+}

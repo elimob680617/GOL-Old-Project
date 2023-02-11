@@ -1,0 +1,10 @@
+mutation createTag($tag: GenericMutationRequestTagReqType!) {
+  createTag(tag: $tag) {
+    listDto {
+      items {
+        title
+        id
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+query getUserPhoneNumbers($filter: GenericFilterRequestUserPhoneNumberGetAllInputType!) {
+  getUserPhoneNumbers(filter: $filter) {
+    listDto {
+      items {
+        id
+        userId
+        phoneNumber
+        audience
+        verificationCode
+        status
+      }
+    }
+  }
+}

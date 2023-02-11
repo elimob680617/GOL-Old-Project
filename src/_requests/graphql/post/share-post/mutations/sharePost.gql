@@ -1,0 +1,16 @@
+mutation sharePost($socialPost: GenericMutationRequestCreateSocialPostInputType!) {
+  sharePost(socialpost: $socialPost) {
+    listDto {
+      items {
+        id
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  }
+}

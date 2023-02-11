@@ -1,0 +1,11 @@
+query getHashtagSearch($filter: GenericFilterRequestHashtagSearchReqInputType!) {
+  hashtagSearchQueryHandler(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+      count
+    }
+  }
+}

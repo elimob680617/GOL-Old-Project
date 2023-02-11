@@ -1,0 +1,16 @@
+mutation createPersonSkill($filter: GenericMutationRequestPersonSkillsInputType!) {
+  createPersonSkill(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      items {
+        id
+        skill {
+          id
+          title
+        }
+        personId
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+mutation deleteMedia($filter: GenericMutationRequestProjectMediaDeleteInputType!) {
+  deleteMedia(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

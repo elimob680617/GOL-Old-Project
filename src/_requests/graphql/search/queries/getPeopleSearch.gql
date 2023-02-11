@@ -1,0 +1,21 @@
+query getPeopleSearch($filter: GenericFilterRequestPersonSearchReqInputType!) {
+  peopleSearchQueryHandler(filter: $filter) {
+    listDto {
+      items {
+        id
+        coverUrl
+        avatarUrl
+        headline
+        cognitoUserId
+        userName
+        fullName
+        email
+        firstName
+        lastName
+        otherToMeStatus
+        meToOtherStatus
+      }
+      count
+    }
+  }
+}

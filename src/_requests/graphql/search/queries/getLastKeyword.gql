@@ -1,0 +1,12 @@
+query getLastKeyWord($filter: GenericFilterRequestGetKeywordReqInputType!) {
+  lastKeywordQueryHandler(filter: $filter) {
+    listDto {
+      items {
+        id
+        keyword
+      }
+      count
+    }
+    isSuccess
+  }
+}

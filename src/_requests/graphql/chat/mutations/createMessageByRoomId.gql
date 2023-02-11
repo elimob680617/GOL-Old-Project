@@ -1,0 +1,25 @@
+mutation createMessageByRoomId($message: GenericMutationRequestMessageInputType!) {
+  createMessageByRoomId(message: $message) {
+    listDto {
+      items {
+        id
+        conversationContactId
+        toUserId
+        ulId
+        toCognitoUserId
+        toUserName
+        text
+        mine
+        roomId
+        createdDateTime
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  }
+}

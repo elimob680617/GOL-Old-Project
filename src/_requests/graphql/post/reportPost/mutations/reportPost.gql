@@ -1,0 +1,12 @@
+mutation reportPost($reportPost:GenericMutationRequestCreateReportPostInputType!){
+  reportPost(reportPost:$reportPost){
+    isSuccess
+    listDto{
+      items{
+        postId
+        reportCategoryId
+      }
+    }
+    messagingKey
+  }
+}

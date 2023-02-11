@@ -1,0 +1,6 @@
+mutation deletePersonSkill($filter: GenericMutationRequestPersonSkillDeleteInputType!) {
+  deletePersonSkill(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

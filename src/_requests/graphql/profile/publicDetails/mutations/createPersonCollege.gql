@@ -1,0 +1,11 @@
+mutation addPersonCollege($filter: GenericMutationRequestPersonCollegeInputType!) {
+  addPersonCollege(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      items {
+        id
+      }
+    }
+  }
+}

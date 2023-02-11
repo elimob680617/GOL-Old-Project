@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  test-ssr:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: 'front-test-ssr-aws'
+    ports:
+      - 127.0.0.1:4082:3000

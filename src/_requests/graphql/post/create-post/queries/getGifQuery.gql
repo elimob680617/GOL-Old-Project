@@ -1,0 +1,12 @@
+query getGif($filter: GenericFilterRequestGifReqType!) {
+  getGifsQuery(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+        gifUrl
+        type
+      }
+    }
+  }
+}

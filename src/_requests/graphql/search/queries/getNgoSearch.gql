@@ -1,0 +1,14 @@
+query getNgoSearch($filter: GenericFilterRequestNgoSearchReqInputType!) {
+  ngoSearchQueryHandler(filter: $filter) {
+    listDto {
+      items {
+        id
+        fullName
+        avatarUrl
+        otherToMeStatus
+        meToOtherStatus
+      }
+      count
+    }
+  }
+}

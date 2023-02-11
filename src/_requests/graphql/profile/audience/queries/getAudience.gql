@@ -1,0 +1,19 @@
+query getAudience($filter:GenericFilterRequestGetAudienceInputType!){
+  getAudience(filter:$filter){
+    messagingKey
+    isSuccess
+    listDto{
+      items{
+        id
+        userType
+        featureAudience
+        isSpecificFollower
+        isExceptFollowes
+        fullName
+        avatarUrl
+        headline  
+      }
+      count
+    }
+  }
+}

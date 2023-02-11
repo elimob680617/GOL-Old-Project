@@ -1,0 +1,19 @@
+query getLocation($filter: GenericFilterRequestLocationGetInputType!) {
+  getLocation(filter: $filter) {
+    listDto {
+      items {
+        id
+        personId
+        cityId
+        locationType
+        audience
+        city {
+          id
+          name
+          placeId
+          countryId
+        }
+      }
+    }
+  }
+}

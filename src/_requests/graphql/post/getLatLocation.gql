@@ -1,0 +1,18 @@
+query getLastLocations($filter: GenericFilterRequestPlaceReqType!) {
+  getLatestLocationsQuery(filter: $filter) {
+    listDto {
+      items {
+        id
+        name
+        cityName
+        cityPlaceId
+        countryName
+        countryPlaceId
+        mainText
+        secondaryText
+        description
+      }
+      count
+    }
+  }
+}

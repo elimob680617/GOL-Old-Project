@@ -1,0 +1,10 @@
+query searchSchools($filter: GenericFilterRequestSearchSchoolInputType!) {
+  searchSchools(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+    }
+  }
+}

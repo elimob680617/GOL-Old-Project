@@ -1,0 +1,10 @@
+query searchConcentrations($filter: GenericFilterRequestConcentrationInputType!) {
+  concentrations(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+    }
+  }
+}

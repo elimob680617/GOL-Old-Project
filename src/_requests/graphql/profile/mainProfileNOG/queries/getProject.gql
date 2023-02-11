@@ -1,0 +1,39 @@
+query getProjects($filter: GenericFilterRequestOrganizationUserProjectInputType!) {
+  getProjects(filter: $filter) {
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+    listDto {
+      items {
+        id
+        title
+        description
+        audience
+        startDate
+        endDate
+        stillWorkingThere
+        cityId
+        cityDto {
+          id
+          name
+          placeId
+          countryId
+        }
+        dateDiff {
+          years
+          months
+          days
+        }
+        projectMedias {
+          id
+          projectId
+          url
+          urls
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+mutation createCompany($filter: GenericMutationRequestCreateCompanyInputType!) {
+  createCompany(filter: $filter) {
+    isSuccess
+    listDto {
+      items {
+        id
+        title
+      }
+    }
+  }
+}

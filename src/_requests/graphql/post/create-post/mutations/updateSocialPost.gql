@@ -1,0 +1,11 @@
+mutation updateSocialPost($socialPost: GenericMutationRequestCreateSocialPostInputType!) {
+  updateSocialPost(socialpost: $socialPost) {
+    listDto {
+      items {
+        id
+      }
+      count
+    }
+    isSuccess
+  }
+}

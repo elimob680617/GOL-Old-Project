@@ -1,0 +1,13 @@
+mutation upsertInterestedCategories($filter: GenericMutationRequestInterestedCategoryInputType!) {
+  upsertInterestedCategories(filter: $filter) {
+    isSuccess
+    listDto {
+      items {
+        personId
+        id
+        categoryId
+      }
+    }
+    messagingKey
+  }
+}

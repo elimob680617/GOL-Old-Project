@@ -1,0 +1,17 @@
+mutation register($registerReqDto: GenericMutationRequestUserRegistrationInputType!) {
+  register(registerReqDto: $registerReqDto) {
+    listDto {
+      items {
+        userName
+        message
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  }
+}

@@ -1,0 +1,16 @@
+mutation confirmUserEmail($filter: GenericMutationRequestConfirmUserEmailInputType!) {
+  confirmUserEmail(filter: $filter) {
+    isSuccess
+    messagingKey
+    listDto {
+      items {
+        id
+        userId
+        email
+        audience
+        verificationCode
+        status
+      }
+    }
+  }
+}

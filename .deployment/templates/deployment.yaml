@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: { { service_name } }
+  name: { { service_name } }
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: { { service_name } }
+  template:
+    metadata:
+      labels:
+        app: { { service_name } }
+    spec:
+      imagePullSecrets:
+        - name: regcred-front
+      containers:
+        - image: { { image_address } }
+          name: { { service_name } }
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always
+      restartPolicy: Always

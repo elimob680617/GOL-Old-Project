@@ -1,0 +1,18 @@
+mutation resendPhoneCode($filter: GenericMutationRequestResendPhoneNumberCodeInputType!) {
+  resendPhoneCode(filter: $filter) {
+    listDto {
+      items {
+        id
+        phoneNumber
+        verificationCode
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  }
+}

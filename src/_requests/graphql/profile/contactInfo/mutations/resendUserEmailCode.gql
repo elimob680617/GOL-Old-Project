@@ -1,0 +1,18 @@
+mutation resendUserEmailCode($filter: GenericMutationRequestResendEmailCodeInputType!) {
+  resendUserEmailCode(filter: $filter) {
+    listDto {
+      items {
+        id
+        email
+        verificationCode
+      }
+      count
+    }
+    isSuccess
+    responseExceptionStatus {
+      message
+      exceptionType
+    }
+    messagingKey
+  }
+}

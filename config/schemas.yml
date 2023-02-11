@@ -1,0 +1,18 @@
+overwrite: true
+schema:
+  - ${NEXT_PUBLIC_GQL_COGNITO_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_PROFILE_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_POST_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_CMS_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_LOCALITY_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_CHAT_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_POSTBEHAVIOR_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_CONNECTION_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_SEARCH_SCHEMA}
+  - ${NEXT_PUBLIC_GQL_HISTORY_SCHEMA}
+generates:
+  ./src/@types/sections/serverTypes.ts:
+    plugins:
+      - typescript
+    config:
+      useTypeImports: true

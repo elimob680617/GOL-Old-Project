@@ -1,0 +1,10 @@
+query searchCities($filter: GenericFilterRequestSearchCitiesInputType!) {
+  searchCities(filter: $filter) {
+    listDto {
+      items {
+        id
+        name
+      }
+    }
+  }
+}

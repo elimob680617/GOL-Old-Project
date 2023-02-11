@@ -1,0 +1,6 @@
+mutation upsertUserSocialMedia($filter: GenericMutationRequestUserSocialMediaInputType!) {
+  upsertUserSocialMedia(filter: $filter) {
+    isSuccess
+    messagingKey
+  }
+}

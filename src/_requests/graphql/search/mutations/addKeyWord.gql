@@ -1,0 +1,12 @@
+mutation addKeyWord($keyWord: GenericMutationRequestKeywordReqInputType!) {
+  keywordCommandHandler(filter: $keyWord) {
+    listDto {
+      items {
+        id
+        keyword
+      }
+      count
+    }
+    isSuccess
+  }
+}

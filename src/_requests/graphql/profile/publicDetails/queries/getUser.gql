@@ -1,0 +1,252 @@
+query getUserDetail($filter: GenericFilterRequestUserInputType!) {
+  getUser(filter: $filter) {
+    listDto {
+      items {
+        completeProfilePercentage
+        userType
+        meReportedOther
+        otherReportedMe
+        accountPrivacy
+        completeQar
+        contactInfoWebSites {
+          id
+          webSiteUrl
+          audience
+        }
+        contactInfoSocialLinks {
+          id
+          userName
+          userId
+          audience
+          socialMediaDto {
+            id
+            title
+          }
+        }
+        contactInfoPhoneNumbers {
+          id
+          userId
+          phoneNumber
+          audience
+          status
+        }
+        contactInfoEmails {
+          id
+          userId
+          email
+          audience
+          status
+        }
+        personDto {
+          id
+          firstName
+          lastName
+          fullName
+          phoneNumber
+          email
+          coverUrl
+          avatarUrl
+          headline
+          birthday
+          gender
+          currnetCity {
+            id
+            locationType
+            audience
+            city {
+              id
+              name
+            }
+          }
+          hometown {
+            id
+            locationType
+            audience
+            city {
+              id
+              name
+            }
+          }
+          joinDateTime
+          joinAudience
+          relationship {
+            personId
+            audience
+            relationshipStatus {
+              id
+              title
+            }
+          }
+          personCurrentExperiences {
+            id
+            title
+            description
+            employmentType
+            audience
+            startDate
+            endDate
+            stillWorkingThere
+            companyId
+            companyDto {
+              id
+              title
+              logoUrl
+            }
+            cityDto {
+              id
+              name
+              placeId
+              countryId
+            }
+            dateDiff {
+              years
+              months
+              days
+            }
+            mediaUrl
+          }
+          experience {
+            title
+            id
+            description
+            employmentType
+            audience
+            startDate
+            endDate
+            stillWorkingThere
+            companyDto {
+              id
+              title
+              logoUrl
+            }
+            cityDto {
+              id
+              name
+              placeId
+              countryId
+            }
+            mediaUrl
+            dateDiff {
+              years
+              months
+              days
+            }
+          }
+          personSchools {
+            id
+            year
+            personId
+            school {
+              id
+              title
+            }
+            schoolId
+            audience
+          }
+          personUniversities {
+            id
+            personDto {
+              id
+              firstName
+              lastName
+              fullName
+              phoneNumber
+              email
+              coverUrl
+              avatarUrl
+              headline
+              birthday
+              gender
+              currnetCity {
+                city {
+                  name
+                  id
+                }
+              }
+              hometown {
+                city {
+                  id
+                  name
+                }
+              }
+              joinDateTime
+              joinAudience
+            }
+            collegeDto {
+              id
+              name
+              alphaTwoCode
+              country
+              stateProvince
+              webSiteUrl1
+              webSiteUrl2
+              webSiteUrl3
+              webSiteUrl4
+              instituteType
+            }
+            concentrationDto {
+              id
+              title
+            }
+            graduated
+            startDate
+            endDate
+            audience
+            instituteType
+          }
+        }
+        organizationUserDto {
+          id
+          fullName
+          coverUrl
+          avatarUrl
+          email
+          groupCategory {
+            id
+            title
+            iconUrl
+            groupCategoryType
+          }
+          joinDateTime
+          organizationUserType
+          groupCategoryId
+          placeId
+          place {
+            id
+            description
+            placeId
+            mainText
+            secondaryText
+          }
+          address
+          numberRange {
+            id
+            from
+            to
+            desc
+          }
+          lat
+          lng
+          establishmentDate
+          joinAudience
+          placeAudience
+          sizeAudience
+          establishmentDateAudience
+          groupCategoryAudience
+          bio
+        }
+        connectionDto {
+          id
+          fromUserId
+          fromUserType
+          itemId
+          itemType
+          meToOtherStatus
+          otherToMeStatus
+          meBlockedOther
+          otherBlockedMe
+        }
+      }
+    }
+  }
+}

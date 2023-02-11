@@ -1,0 +1,11 @@
+query getCollegeForFilter($filter: GenericFilterRequestEducationFilterReqInputType!) {
+  collegeSearchQueryHandler(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+      count
+    }
+  }
+}

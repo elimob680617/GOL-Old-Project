@@ -1,0 +1,5 @@
+mutation DeleteComment($comment: GenericMutationRequestCommentReqType!) {
+  deleteComment(comment: $comment) {
+    isSuccess
+  }
+}

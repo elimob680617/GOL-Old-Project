@@ -1,0 +1,48 @@
+{
+  "plugins": ["prettier", "@typescript-eslint", "unused-imports"],
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"],
+  "rules": {
+    "arrow-body-style": 1,
+    "react/display-name": 0,
+    "import/no-duplicates": 1,
+    "react/no-children-prop": 0,
+    "react-hooks/exhaustive-deps": 0,
+    "react/self-closing-comp": 2,
+    "@next/next/no-img-element": 0,
+    "react/no-unescaped-entities": 0,
+    "import/no-useless-path-segments": 1,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/no-inferrable-types": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/no-unnecessary-type-constraint": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-unused-vars": 0,
+    "react/jsx-filename-extension": 0,
+    "no-param-reassign": 0,
+    "react/prop-types": 0,
+    "react/require-default-props": 0,
+    "react/no-array-index-key": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-props-no-spreading": 0,
+    "import/order": 0,
+    "no-console": 0,
+    "no-shadow": 0,
+    "@typescript-eslint/naming-convention": 0,
+    "import/no-cycle": 0,
+    "prefer-destructuring": 0,
+    "prettier/prettier": [
+      1,
+      {
+        "printWidth": 120,
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "tabWidth": 2,
+        "semi": true,
+        "endOfLine": "crlf"
+      }
+    ]
+  }
+}

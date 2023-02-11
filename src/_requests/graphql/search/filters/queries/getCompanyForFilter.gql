@@ -1,0 +1,11 @@
+query getCompanyForFilter($filter: GenericFilterRequestFilterReqInputType!) {
+  companySearchQueryHandler(filter: $filter) {
+    listDto {
+      items {
+        id
+        title
+      }
+      count
+    }
+  }
+}

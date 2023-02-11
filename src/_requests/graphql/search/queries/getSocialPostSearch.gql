@@ -1,0 +1,22 @@
+query getSocialSearch($filter: GenericFilterRequestPostSearchReqInputType!) {
+  postSearchQueryHandler(filter: $filter) {
+    listDto {
+      items {
+        id
+        body
+        coverImage
+        createdDateTime
+        ownerUserId
+        mentionedUserIds
+        pictureUrls
+        postType
+        defaultPictureUrl
+        numberOfComments
+        numberOfLikes
+        numberOfShared
+        numberOfViews
+      }
+      count
+    }
+  }
+}
